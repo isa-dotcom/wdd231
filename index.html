@@ -4,17 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="description"
-        content="WDD 231 course home page for web development studies."
-    >
-
-    <meta
-        name="author"
-        content="Isadora Paula"
-    >
+    <meta name="description" content="WDD 231 course home page for Isadora Paula.">
+    <meta name="author" content="Isadora Paula">
 
     <title>WDD 231 | Isadora Paula</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/large.css">
@@ -25,98 +22,112 @@
 </head>
 
 <body>
-
     <header>
         <div class="header-content">
-
-            <div class="site-brand">
+            <a class="site-brand" href="index.html">
                 <img src="images/logo.svg" alt="Site logo">
                 <span>Isadora Paula</span>
-            </div>
+            </a>
 
-            <button id="menu-button" aria-label="Open navigation menu">
+            <button
+                id="menu-button"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="navigation">
                 ☰
             </button>
-
         </div>
 
-        <nav id="navigation">
-            <a href="index.html" class="active">Home</a>
-            <a href="#">Chamber Project</a>
-            <a href="#">Final Project</a>
+        <nav id="navigation" aria-label="Main navigation">
+            <a class="active" href="index.html">Home</a>
+            <a href="chamber/">Chamber Project</a>
+            <a href="final/">Final Project</a>
         </nav>
     </header>
 
-
     <main>
-
         <h1>Home</h1>
 
         <div class="top-content">
-
             <section class="about-me">
                 <h2>About Me</h2>
 
-                <p>
-                    Massa facilisis per purus si imperdiet curae amet.
-                    Et fames lorem mi phasellus congue nascetur enim
-                    consectetur sociosqu natoque risus.
-                    Odio vehicula libero nisi viverra augue commodo.
-                    Primum vivamus at duis magna quam fringilla convallis
-                    ridiculus malesuada accumsan potenti.
-                </p>
-            </section>
+                <div class="section-content">
+                    <p>
+                        Hello! My name is Isadora Paula. I am a student at
+                        Brigham Young University-Idaho studying web development
+                        and programming.
+                    </p>
 
+                    <p>
+                        I enjoy creating websites, learning new technologies,
+                        photography, design, music, and developing creative
+                        projects.
+                    </p>
+                </div>
+            </section>
 
             <section class="student-photo">
                 <h2>Student Photo</h2>
 
-                <img
-                    src="images/student.jpg"
-                    alt="Student photo"
-                >
+                <div class="section-content photo-content">
+                    <img
+                        src="images/student.jpg"
+                        alt="Isadora Paula"
+                        loading="lazy">
+                </div>
             </section>
-
         </div>
 
-
         <section class="courses">
-
             <h2>Web Certificate Courses</h2>
 
             <div class="course-filters">
-                <button id="all-courses">All</button>
-                <button id="cse-courses">CSE</button>
-                <button id="wdd-courses">WDD</button>
+                <button id="all-courses" type="button">All Courses</button>
+                <button id="cse-courses" type="button">CSE Courses</button>
+                <button id="wdd-courses" type="button">WDD Courses</button>
             </div>
 
             <div id="course-container"></div>
 
             <p class="credits">
-                The total credits for course listed above is
-                <span id="credit-total">0</span>
+                The total credits for the displayed courses are
+                <strong><span id="credit-total">0</span></strong>
             </p>
-
         </section>
-
     </main>
 
-
     <footer>
-
         <div class="social-links">
-            <a href="#" aria-label="LinkedIn">in</a>
-            <a href="#" aria-label="GitHub">GitHub</a>
-            <a href="#" aria-label="X">X</a>
+            <a
+                href="https://github.com/isa-dotcom"
+                target="_blank"
+                rel="noopener noreferrer">
+                GitHub
+            </a>
+
+            <a
+                href="https://www.linkedin.com/in/isadora-paula-a8619b3a7/"
+                target="_blank"
+                rel="noopener noreferrer">
+                LinkedIn
+            </a>
+
+            <a
+                href="https://www.instagram.com/_isapaulac/"
+                target="_blank"
+                rel="noopener noreferrer">
+                Instagram
+            </a>
         </div>
 
         <p>
-            © <span id="currentyear"></span> • Isadora Paula • Brazil
+            © <span id="currentyear"></span> Isadora Paula
+            | Ceará, Brazil
         </p>
 
         <p id="lastModified"></p>
-
     </footer>
-
 </body>
 </html>

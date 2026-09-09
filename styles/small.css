@@ -1,0 +1,248 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #1d3557;
+    --secondary-color: #457b9d;
+    --accent-color: #f1faee;
+    --light-color: #f8f9fa;
+    --medium-color: #e9ecef;
+    --dark-color: #212529;
+    --border-color: #ced4da;
+    --white-color: #ffffff;
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    color: var(--dark-color);
+    background-color: var(--light-color);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.site-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--white-color);
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.site-brand img {
+    width: 45px;
+    height: 45px;
+}
+
+#menu-button {
+    border: none;
+    background: transparent;
+    color: var(--white-color);
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+#menu-button:focus-visible,
+nav a:focus-visible,
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+nav {
+    display: none;
+    flex-direction: column;
+    background-color: var(--dark-color);
+}
+
+nav.open {
+    display: flex;
+}
+
+nav a {
+    padding: 1rem;
+    color: var(--white-color);
+    text-align: center;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover,
+nav a.active {
+    background-color: var(--secondary-color);
+}
+
+main {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+h1 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin: 0 0 1rem;
+}
+
+.top-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+section {
+    border: 1px solid var(--border-color);
+    background-color: var(--white-color);
+}
+
+section h2 {
+    margin: 0;
+    padding: 0.75rem;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.section-content {
+    padding: 1rem;
+}
+
+.photo-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.student-photo img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    display: block;
+}
+
+.courses {
+    margin-top: 1rem;
+}
+
+.course-filters {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    padding: 1rem;
+    background-color: var(--white-color);
+}
+
+.course-filters button {
+    padding: 0.75rem 0.25rem;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--dark-color);
+    color: var(--white-color);
+    font-family: inherit;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.course-filters button:hover,
+.course-filters button.active {
+    background-color: var(--secondary-color);
+}
+
+#course-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    padding: 0 1rem 1rem;
+}
+
+.course {
+    padding: 1rem;
+    border: 1px solid #adb5bd;
+    border-radius: 5px;
+    background-color: var(--medium-color);
+    text-align: center;
+}
+
+.course.completed {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    border-color: var(--primary-color);
+}
+
+.course-code {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.course-title {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.9rem;
+}
+
+.course-status {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.credits {
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+    background-color: var(--white-color);
+    border-top: 1px solid var(--border-color);
+}
+
+footer {
+    margin-top: 2rem;
+    padding: 1.5rem 1rem;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.social-links a {
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+#lastModified {
+    font-size: 0.85rem;
+}
