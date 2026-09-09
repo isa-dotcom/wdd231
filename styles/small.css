@@ -135,6 +135,7 @@ section h2 {
     max-width: 250px;
     height: auto;
     display: block;
+    border-radius: 10px;
 }
 
 .courses {
@@ -224,19 +225,35 @@ footer {
 .social-links {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
+    align-items: center;
+    gap: 1.5rem;
     margin-bottom: 1rem;
 }
 
 .social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
     color: var(--white-color);
     text-decoration: none;
-    font-weight: 500;
 }
 
-.social-links a:hover {
-    color: var(--accent-color);
+.social-links svg {
+    width: 30px;
+    height: 30px;
+    fill: currentColor;
+    transition: transform 0.2s ease;
+}
+
+.social-links a:hover svg {
+    transform: scale(1.15);
+}
+
+.social-links a:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 4px;
 }
 
 footer p {
