@@ -1,136 +1,135 @@
 
-/* ========================================
+/* ================================
    CAUCAIA CONNECT
-   LARGE SCREENS
-======================================== */
+   TABLET AND DESKTOP STYLES
+================================ */
 
-/* TABLETS AND SMALL DESKTOPS */
+/* TABLETS */
 @media screen and (min-width: 700px) {
 
     /* HEADER */
     .header-container {
         flex-wrap: nowrap;
-        padding: 1.2rem 4%;
-        min-height: 100px;
+        padding: 14px 28px;
     }
 
-    /* HIDE MOBILE MENU */
     #menu-button {
         display: none;
     }
 
-    /* DESKTOP NAVIGATION */
     #navigation {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: flex-end;
-
+        gap: 8px;
         width: auto;
         padding-top: 0;
-        gap: 0.5rem;
     }
 
     #navigation a {
-        padding: 0.7rem 1rem;
+        padding: 10px 13px;
+        font-size: 0.9rem;
     }
 
-    /* PAGE INTRO */
+    /* INTRODUCTION */
     .page-intro {
-        padding: 5.5rem 5%;
-    }
-
-    .page-intro h1 {
-        font-size: 3.5rem;
+        padding-top: 80px;
+        padding-bottom: 55px;
     }
 
     /* DIRECTORY */
     .directory-section {
-        padding: 4rem 4%;
+        padding-right: 28px;
+        padding-left: 28px;
     }
 
     .directory-header {
         flex-direction: row;
-        justify-content: space-between;
         align-items: center;
     }
 
-    /* MEMBER GRID */
     #members-container {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 1.5rem;
+        gap: 24px;
     }
 
-    /* MEMBER LIST */
-    #members-container.list {
-        display: flex;
-        flex-direction: column;
-    }
-
-    #members-container.list .member-card {
-        flex-direction: row;
+    /* LIST VIEW */
+    #members-container.list-view .member-card {
+        grid-template-columns: 120px 1fr;
         align-items: center;
-        justify-content: flex-start;
-        gap: 1rem;
+        column-gap: 22px;
     }
 
-    #members-container.list .member-card img {
+    #members-container.list-view .member-card img {
         display: block;
-
-        width: 100px;
-        height: 80px;
-
-        aspect-ratio: 5 / 4;
+        grid-column: 1;
+        grid-row: 1 / span 5;
+        width: 120px;
+        height: 100px;
+        margin: 0;
         object-fit: contain;
-
-        margin: 0 1rem 0 0;
-        flex-shrink: 0;
     }
 
     /* FOOTER */
     .footer-container {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 3rem;
+        gap: 35px;
+        padding: 55px 28px;
     }
 }
 
-
-/* DESKTOP SCREENS */
+/* DESKTOP */
 @media screen and (min-width: 1000px) {
 
     .header-container {
-        padding: 1.2rem 2rem;
+        padding-right: 35px;
+        padding-left: 35px;
     }
 
-    /* THREE-COLUMN GRID */
-    #members-container {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+    #navigation {
+        gap: 12px;
     }
 
-    /* LIST VIEW ALWAYS ONE COLUMN */
-    #members-container.list {
-        display: flex;
-        flex-direction: column;
+    #navigation a {
+        padding: 11px 16px;
+    }
+
+    .page-intro {
+        padding-top: 95px;
+        padding-bottom: 65px;
     }
 
     .directory-section {
-        padding: 4.5rem 2rem;
+        padding-right: 35px;
+        padding-left: 35px;
     }
 
-    /* FOOTER */
+    #members-container {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 26px;
+    }
+
+    .member-card {
+        padding: 20px;
+    }
+
+    .member-card img {
+        height: 190px;
+    }
+
+    #members-container.list-view .member-card {
+        grid-template-columns: 150px 1fr;
+    }
+
+    #members-container.list-view .member-card img {
+        width: 150px;
+        height: 110px;
+    }
+
     .footer-container {
-        grid-template-columns: 1.2fr 1fr 1.5fr;
+        grid-template-columns: 1.3fr 1fr 1fr;
+        gap: 50px;
+        padding: 60px 35px;
     }
-}
-
-
-/* LARGE DESKTOP */
-@media screen and (min-width: 1400px) {
-
-    .header-container,
-    .directory-section,
-    .footer-container {
-        max-width: 1200px;
-    }
-
 }
