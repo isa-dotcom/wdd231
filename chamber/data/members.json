@@ -1,0 +1,66 @@
+
+[
+    {
+        "companyName": "Iandê Shopping Caucaia",
+        "address": "Av. Edson da Mota Correia, 620, Centro, Caucaia - CE, 61600-040",
+        "phone": "(85) 3387-1800",
+        "website": "https://www.iandeshopping.com.br/",
+        "image": "iande-shopping.webp",
+        "membershipLevel": 3,
+        "description": "Shopping center offering retail stores, food, entertainment and services."
+    },
+    {
+        "companyName": "Outlet Premium Fortaleza",
+        "address": "BR-020, Km 12, Toco, Caucaia - CE, 61663-020",
+        "phone": "(85) 3401-0600",
+        "website": "https://www.outletpremium.com.br/br/fortaleza/",
+        "image": "outlet-premium.webp",
+        "membershipLevel": 3,
+        "description": "Open-air outlet shopping center with national and international brands."
+    },
+    {
+        "companyName": "Padaria Mar e Sol",
+        "address": "Av. Juaci Sampaio Pontes, 235A, Curicaca, Caucaia - CE",
+        "phone": "(85) 3318-3897",
+        "website": "https://grupomaresol.com.br/",
+        "image": "padaria-mar-e-sol.webp",
+        "membershipLevel": 2,
+        "description": "Bakery, coffee shop and restaurant offering food and fresh baked goods."
+    },
+    {
+        "companyName": "Acal Home Center Caucaia",
+        "address": "Rua Coronel Correia, 2273, Parque Soledade, Caucaia - CE",
+        "phone": "(85) 3492-5000",
+        "website": "https://www.acalhomecenter.com.br/",
+        "image": "acal-home.webp",
+        "membershipLevel": 3,
+        "description": "Home improvement store offering construction materials, lighting and home supplies."
+    },
+    {
+        "companyName": "Impacto Prime Caucaia",
+        "address": "Av. Juaci Sampaio Pontes, 1830, Centro, Caucaia - CE",
+        "phone": "0800 100 7575",
+        "website": "https://www.google.com/maps/search/?api=1&query=Impacto+Prime+Caucaia",
+        "image": "impacto-prime.webp",
+        "membershipLevel": 2,
+        "description": "Automotive center offering tires and vehicle maintenance services."
+    },
+    {
+        "companyName": "Super Caucaia",
+        "address": "Av. Edson da Mota Correia, Centro, Caucaia - CE, 61600-040",
+        "phone": "(85) 3387-1400",
+        "website": "https://www.google.com/maps/search/?api=1&query=Super+Caucaia+Ceara",
+        "image": "super-caucaia.webp",
+        "membershipLevel": 1,
+        "description": "Local supermarket serving the community with groceries and everyday products."
+    },
+    {
+        "companyName": "Restaurante Maria Chiquinha",
+        "address": "CE-090, 520, Itambé, Caucaia - CE, 61602-750",
+        "phone": "(85) 3368-8445",
+        "website": "https://www.google.com/maps/search/?api=1&query=Restaurante+Maria+Chiquinha+Caucaia",
+        "image": "maria-chiquinha.webp",
+        "membershipLevel": 1,
+        "description": "Restaurant serving regional food and traditional breakfast options."
+    }
+]

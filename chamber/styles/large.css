@@ -1,0 +1,136 @@
+
+/* ========================================
+   CAUCAIA CONNECT
+   LARGE SCREENS
+======================================== */
+
+/* TABLETS AND SMALL DESKTOPS */
+@media screen and (min-width: 700px) {
+
+    /* HEADER */
+    .header-container {
+        flex-wrap: nowrap;
+        padding: 1.2rem 4%;
+        min-height: 100px;
+    }
+
+    /* HIDE MOBILE MENU */
+    #menu-button {
+        display: none;
+    }
+
+    /* DESKTOP NAVIGATION */
+    #navigation {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+
+        width: auto;
+        padding-top: 0;
+        gap: 0.5rem;
+    }
+
+    #navigation a {
+        padding: 0.7rem 1rem;
+    }
+
+    /* PAGE INTRO */
+    .page-intro {
+        padding: 5.5rem 5%;
+    }
+
+    .page-intro h1 {
+        font-size: 3.5rem;
+    }
+
+    /* DIRECTORY */
+    .directory-section {
+        padding: 4rem 4%;
+    }
+
+    .directory-header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* MEMBER GRID */
+    #members-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.5rem;
+    }
+
+    /* MEMBER LIST */
+    #members-container.list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #members-container.list .member-card {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1rem;
+    }
+
+    #members-container.list .member-card img {
+        display: block;
+
+        width: 100px;
+        height: 80px;
+
+        aspect-ratio: 5 / 4;
+        object-fit: contain;
+
+        margin: 0 1rem 0 0;
+        flex-shrink: 0;
+    }
+
+    /* FOOTER */
+    .footer-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 3rem;
+    }
+}
+
+
+/* DESKTOP SCREENS */
+@media screen and (min-width: 1000px) {
+
+    .header-container {
+        padding: 1.2rem 2rem;
+    }
+
+    /* THREE-COLUMN GRID */
+    #members-container {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    /* LIST VIEW ALWAYS ONE COLUMN */
+    #members-container.list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .directory-section {
+        padding: 4.5rem 2rem;
+    }
+
+    /* FOOTER */
+    .footer-container {
+        grid-template-columns: 1.2fr 1fr 1.5fr;
+    }
+}
+
+
+/* LARGE DESKTOP */
+@media screen and (min-width: 1400px) {
+
+    .header-container,
+    .directory-section,
+    .footer-container {
+        max-width: 1200px;
+    }
+
+}

@@ -5,21 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Official business directory of the Chamber of Commerce. Discover local businesses, services and community partners.">
+    <!-- SEO -->
+    <title>Business Directory | Caucaia Connect</title>
+    <meta name="description" content="Explore local businesses in Caucaia, Ceará, Brazil. Connect with entrepreneurs, discover services, and support our community.">
     <meta name="author" content="Isadora Paula">
 
-    <title>Business Directory | Chamber of Commerce</title>
-
+    <!-- Favicon -->
     <link rel="icon" href="images/isfavicon.ico">
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:title" content="Business Directory | Chamber of Commerce">
-    <meta property="og:description" content="Discover local businesses and services in our community.">
-    <meta property="og:image" content="https://username.github.io/wdd231/chamber/images/thumbnail.jpg">
-    <meta property="og:url" content="https://username.github.io/wdd231/chamber/directory.html">
+    <!-- Facebook Open Graph -->
     <meta property="og:type" content="website">
+    <meta property="og:title" content="Business Directory | Caucaia Connect">
+    <meta property="og:description" content="Connecting local businesses. Strengthening our community.">
+    <meta property="og:image" content="https://isa-dotcom.github.io/wdd231/chamber/images/thumbnail.jpg">
+    <meta property="og:url" content="https://isa-dotcom.github.io/wdd231/chamber/directory.html">
 
-    <!-- CSS -->
+    <!-- Styles -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/large.css">
@@ -29,52 +30,113 @@
 </head>
 
 <body>
-
     <header>
-        <div class="site-name">
-            <h1>Chamber of Commerce</h1>
-            <p>Connecting our community</p>
+        <div class="header-container">
+            <div class="branding">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">C.</span>
+                    <span class="logo-text">
+                        <strong>CAUCAIA CONNECT</strong>
+                        <small>Chamber of Commerce</small>
+                    </span>
+                </a>
+            </div>
+
+            <button id="menu-button"
+                    type="button"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                    aria-controls="navigation">
+                ☰
+            </button>
+
+            <nav id="navigation" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="directory.html" class="active" aria-current="page">Directory</a>
+                <a href="join.html">Join</a>
+                <a href="discover.html">Discover</a>
+            </nav>
         </div>
-
-        <button id="menu-button" aria-label="Open navigation menu">
-            ☰
-        </button>
-
-        <nav id="navigation">
-            <a href="index.html">Home</a>
-            <a href="directory.html" class="active">Directory</a>
-            <a href="#">Join</a>
-            <a href="#">Discover</a>
-        </nav>
     </header>
 
     <main>
-        <h2>Business Directory</h2>
+        <section class="page-intro">
+            <div class="intro-content">
+                <p class="eyebrow">OUR COMMUNITY</p>
+                <h1>Business Directory</h1>
+                <p>
+                    Discover the businesses that make Caucaia
+                    a place of opportunities, creativity,
+                    and growth.
+                </p>
+            </div>
+        </section>
 
-        <div class="view-options">
-            <button id="grid-view">Grid View</button>
-            <button id="list-view">List View</button>
-        </div>
+        <section class="directory-section" aria-labelledby="directory-heading">
+            <div class="directory-header">
+                <div>
+                    <p class="eyebrow">EXPLORE LOCAL BUSINESSES</p>
+                    <h2 id="directory-heading">Our Members</h2>
+                </div>
 
-        <div id="members-container" class="grid">
-            <!-- Members will be loaded here using JavaScript -->
-        </div>
+                <div class="view-options" aria-label="Directory display options">
+                    <button id="grid-view"
+                            type="button"
+                            class="view-button active"
+                            aria-pressed="true">
+                        Grid View
+                    </button>
+
+                    <button id="list-view"
+                            type="button"
+                            class="view-button"
+                            aria-pressed="false">
+                        List View
+                    </button>
+                </div>
+            </div>
+
+            <div id="members-container" class="grid">
+                <!-- Member cards generated by JavaScript -->
+            </div>
+        </section>
     </main>
 
     <footer>
-        <div class="contact-info">
-            <h3>Chamber of Commerce</h3>
-            <p>City, State</p>
-            <p>Email: info@example.com</p>
-            <p>Phone: (00) 0000-0000</p>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h2>Caucaia Connect</h2>
+                <p>Chamber of Commerce</p>
+                <p>
+                    Connecting local businesses.
+                    Strengthening our community.
+                </p>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <p>Caucaia, Ceará, Brazil</p>
+                <p>isapaularibeiro1415@gmail.com</p>
+                <p>+55 (85) 98722-5808</p>
+            </div>
+
+            <div class="footer-info">
+                <h3>Development</h3>
+                <p>Isadora Paula</p>
+                <p>WDD 231 - Web Frontend Development I</p>
+                <p>
+                    Last Modification:
+                    <span id="last-modified"></span>
+                </p>
+            </div>
         </div>
 
-        <div class="development-info">
-            <p>&copy; <span id="current-year"></span> Isadora Paula</p>
-            <p>WDD 231 - Web Frontend Development I</p>
-            <p>Last Modification: <span id="last-modified"></span></p>
+        <div class="footer-bottom">
+            <p>
+                &copy; <span id="current-year"></span>
+                Caucaia Connect Chamber of Commerce
+            </p>
         </div>
     </footer>
-
 </body>
 </html>

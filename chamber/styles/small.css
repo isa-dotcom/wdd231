@@ -1,0 +1,484 @@
+
+/* ========================================
+   CAUCAIA CONNECT
+   MOBILE FIRST - SMALL SCREENS
+======================================== */
+
+/* COLOR VARIABLES */
+:root {
+    --primary: #4c72ff;
+    --secondary: #7c98ff;
+    --light-blue: #c8edf4;
+    --dark: #1d1f26;
+    --black: #000000;
+    --white: #fefdfd;
+
+    --background: #fefdfd;
+    --text: #1d1f26;
+
+    --border: #e5e8f0;
+    --shadow: 0 8px 24px rgba(29, 31, 38, 0.08);
+
+    --font-heading: 'Roca Two', Georgia, serif;
+    --font-body: 'Glacial Indifference', Arial, sans-serif;
+}
+
+/* GENERAL */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--background);
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.5;
+    overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-heading);
+    color: var(--dark);
+    line-height: 1.2;
+}
+
+p {
+    margin-bottom: 0.75rem;
+}
+
+button {
+    border: none;
+    font: inherit;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ACCESSIBILITY */
+:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 3px;
+}
+
+/* HEADER */
+header {
+    background-color: var(--white);
+    border-bottom: 1px solid var(--border);
+    position: relative;
+    z-index: 10;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 5%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    min-height: 100px;
+}
+
+/* BRANDING */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+.logo-icon {
+    width: 43px;
+    height: 43px;
+    flex-shrink: 0;
+
+    background-color: var(--primary);
+    color: var(--white);
+    border-radius: 12px;
+
+    display: grid;
+    place-items: center;
+
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-text strong {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    letter-spacing: 0.04em;
+    color: var(--dark);
+}
+
+.logo-text small {
+    color: #626779;
+    font-size: 0.75rem;
+}
+
+/* MOBILE MENU BUTTON */
+#menu-button {
+    background-color: var(--light-blue);
+    color: var(--dark);
+    font-size: 1.5rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+}
+
+/* NAVIGATION */
+#navigation {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.3rem;
+    padding-top: 1rem;
+}
+
+#navigation.open {
+    display: flex;
+}
+
+#navigation a {
+    padding: 0.8rem 1rem;
+    color: var(--dark);
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+#navigation a:hover,
+#navigation a.active {
+    background-color: var(--light-blue);
+    color: var(--primary);
+}
+
+/* PAGE INTRO */
+.page-intro {
+    background: linear-gradient(
+        135deg,
+        var(--light-blue),
+        #e9f1ff
+    );
+
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+.intro-content {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.eyebrow {
+    color: var(--primary);
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin-bottom: 0.7rem;
+}
+
+.page-intro h1 {
+    font-size: clamp(2.2rem, 8vw, 3.5rem);
+    margin-bottom: 1rem;
+}
+
+.page-intro p:last-child {
+    max-width: 580px;
+    margin: 0 auto;
+    color: #454b5b;
+    font-size: 1.05rem;
+}
+
+/* DIRECTORY SECTION */
+.directory-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 5%;
+}
+
+.directory-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.directory-header h2 {
+    font-size: 2rem;
+}
+
+/* VIEW BUTTONS */
+.view-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.view-button {
+    padding: 0.7rem 1.1rem;
+
+    background-color: var(--white);
+    color: var(--dark);
+
+    border: 1px solid var(--border);
+    border-radius: 8px;
+
+    font-weight: bold;
+    transition: background-color 0.3s ease,
+                color 0.3s ease;
+}
+
+.view-button:hover,
+.view-button.active {
+    background-color: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+}
+
+/* MEMBERS GRID */
+
+#members-container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+
+    min-width: 0;
+
+    /* Reserve space while JSON loads */
+    min-height: 1800px;
+}
+
+@media screen and (min-width: 700px) {
+    #members-container {
+        min-height: 1100px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    #members-container {
+        min-height: 850px;
+    }
+}
+
+/* MEMBER CARD */
+.member-card {
+    min-width: 0;
+    background-color: var(--white);
+
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+
+    box-shadow: var(--shadow);
+    padding: 1.5rem;
+
+    text-align: center;
+
+    transition: box-shadow 0.3s ease;
+}
+
+.member-card:hover {
+    box-shadow: 0 12px 30px rgba(29, 31, 38, 0.12);
+}
+
+/* MEMBER IMAGE */
+.member-card img {
+    display: block;
+
+    width: 100%;
+    height: 170px;
+
+    aspect-ratio: 3 / 2;
+    object-fit: contain;
+    object-position: center;
+
+    margin: 0 auto 1rem;
+
+    background-color: #f7f9ff;
+}
+
+/* MEMBER INFORMATION */
+.member-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.7rem;
+}
+
+.member-card p {
+    font-size: 0.9rem;
+    color: #555b6b;
+    margin-bottom: 0.5rem;
+    overflow-wrap: anywhere;
+}
+
+.member-card a {
+    display: inline-block;
+    color: var(--primary);
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+.member-card a:hover {
+    text-decoration: underline;
+}
+
+/* MEMBERSHIP BADGE */
+.membership-level {
+    display: inline-block;
+
+    background-color: var(--light-blue);
+    color: var(--dark);
+
+    padding: 0.35rem 0.8rem;
+    border-radius: 20px;
+
+    font-size: 0.75rem;
+    font-weight: bold;
+
+    margin: 0.5rem 0;
+}
+
+/* LIST VIEW */
+#members-container.list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+#members-container.list .member-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    text-align: left;
+
+    box-shadow: none;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid var(--border);
+
+    padding: 1.2rem 0;
+}
+
+#members-container.list .member-card img {
+    display: none;
+}
+
+#members-container.list .member-card:hover {
+    transform: none;
+    background-color: #f6f8ff;
+}
+
+/* LOADING AND ERROR MESSAGES */
+.loading-message,
+.error-message {
+    padding: 2rem;
+    text-align: center;
+    color: #555b6b;
+}
+
+
+/* FOOTER */
+footer {
+    background-color: var(--dark);
+    color: var(--white);
+    padding: 3rem 5% 1rem;
+
+    /* Keep footer layout predictable */
+    min-height: 280px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+}
+
+.footer-brand,
+.footer-contact,
+.footer-info {
+    min-width: 0;
+}
+
+footer h2,
+footer h3 {
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+footer h2 {
+    font-size: 1.5rem;
+}
+
+footer p {
+    color: #d4d8e4;
+    font-size: 0.9rem;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 2rem auto 0;
+    padding-top: 1.5rem;
+    border-top: 1px solid #41434b;
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin-bottom: 0;
+    font-size: 0.8rem;
+}
+
+/* VERY SMALL SCREENS */
+@media screen and (max-width: 360px) {
+
+    .logo-text strong {
+        font-size: 0.85rem;
+    }
+
+    .logo-text small {
+        font-size: 0.65rem;
+    }
+
+    .view-button {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.85rem;
+    }
+
+    .member-card {
+        padding: 1rem;
+    }
+}
+
+/* REDUCED MOTION ACCESSIBILITY */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}

@@ -1,0 +1,72 @@
+
+/* ========================================
+   CAUCAIA CONNECT
+   CSS NORMALIZATION
+======================================== */
+
+/* Remove default spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Body defaults */
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Images */
+img,
+picture,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+/* Form elements */
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Buttons */
+button {
+    cursor: pointer;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Lists */
+ul,
+ol {
+    list-style: none;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.2;
+}
+
+/* Accessibility */
+:focus-visible {
+    outline: 3px solid #4c72ff;
+    outline-offset: 3px;
+}
